@@ -2,28 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 
 <body>
 
-    <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action active">
-            Cras justo odio
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-        <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-        <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-        <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1"
-            aria-disabled="true">Vestibulum at eros</a>
-    </div>
+  <div class="list-group list-group-flush">
+    <a href="#" class="list-group-item list-group-item-action active">
+      Weather Dashboard
+    </a>
+    <!-- <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+    <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Vestibulum at
+      eros</a> -->
+  </div>
 
-    <div class="card" style="width: 18rem;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3">
+        <h4>Search by city:</h4>
+          <input id="searchCity" type="text" class="city-search" placeholder="search here" />
+          <button id="searchBtn" type="button" class="search-button">Search</button>
+      </div>
+      
+      <div class="col-lg-7">
+        <div class="jumbotron">
+          <h3 class="display-4" id="city-result"></h3>
+          <div id="weather-info"> </div>
+        
+       
+        
+      </div>
+      
+    </div>
+    <div class="row">
+      <div class="card" style="width: 18rem;">
         <div class="card-header">
           Featured
         </div>
@@ -31,8 +50,32 @@
           <li class="list-group-item">Cras justo odio</li>
           <li class="list-group-item">Dapibus ac facilisis in</li>
           <li class="list-group-item">Vestibulum at eros</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+          <li class="list-group-item">Vestibulum at eros</li>
         </ul>
+        
+      </div> 
+      <div class="col-lg-6">
+        <h4>5 day forcast</h4>
+        <div class="card" id="five-day" style="width: 18rem;">
+          <ul id="five-days">
+            
+          </ul>
+          
       </div>
+      
+    </div>
+    
+  </div>
+
+
+  
+
+  
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="Assets/apiCall.js"></script>
+    
 </body>
 
 </html>
